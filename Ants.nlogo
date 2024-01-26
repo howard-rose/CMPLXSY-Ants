@@ -23,7 +23,7 @@ to go
   ask turtles
   [
     ifelse coin-flip? [right random max-turn] [left random max-turn]
-    forward random max-step
+    forward 1
 
     if pcolor = green
     [
