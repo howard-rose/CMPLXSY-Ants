@@ -12,10 +12,7 @@ to setup
     set color red
   ]
 
-  ask patches
-  [
-    set pcolor green
-  ]
+  create-food-patches
 end
 
 to go
@@ -35,6 +32,21 @@ end
 
 to-report coin-flip?
   report random 2 = 0
+end
+
+to create-food-patches
+  repeat 2
+  [
+    ask one-of patches
+    [ set pcolor green ]
+  ]
+  repeat 9
+  [
+    ask patches [
+      if [pcolor] of one-of neighbors4 = green
+      [ set pcolor green ]
+    ]
+  ]
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
