@@ -1,4 +1,4 @@
-turtles-own [food-eaten]
+turtles-own []
 
 to setup
   clear-all
@@ -10,7 +10,6 @@ to setup
     set shape "bug"
     set size 3
     set color red
-    set food-eaten 0
   ]
 
   ask patches
@@ -29,8 +28,6 @@ to go
     if pcolor = green
     [
       set pcolor black
-      set food-eaten (food-eaten + 1)
-      set label food-eaten
     ]
   ]
   tick
@@ -488,7 +485,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.2.0
+NetLogo 6.4.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
